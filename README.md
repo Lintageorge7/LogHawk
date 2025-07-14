@@ -121,13 +121,10 @@ Pull requests are welcome! If you discover new threat patterns or want to improv
 📄 License
 This project is licensed under the MIT License.
 
-👨‍💻 Author
+# 👨‍💻 Author
 Linta Susan George
 Cybersecurity Student @ Lighthouse Labs
 🇨🇦 Canada
 
-yaml
-Copy
-Edit
-
+   
 
