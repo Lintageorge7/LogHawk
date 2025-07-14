@@ -1,1 +1,5 @@
 mkdir sample_logs
+touch sample_logs/.gitkeep
+git add sample_logs/.gitkeep
+git commit -m "Add sample_logs directory with .gitkeep"
+git push origin main
