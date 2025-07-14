@@ -21,24 +21,29 @@ bash
 Copy
 Edit
 chmod +x loghawk.sh
+
 🐍 Usage (Python)
 ```bash
 Copy
 Edit
 python3 loghawk.py /path/to/logfile.log
+
 Example Output:
 css
 Copy
 Edit
+
 [🔐] 6 failed login attempts from 192.168.1.101
 [🌐] High traffic from 10.0.0.55: 214 requests
 [🔥] ERROR at 13:24:45: Disk quota exceeded
 [🦠] Suspicious activity: curl download detected in cron job
+
 💻 Usage (Bash)
 bash
 Copy
 Edit
 ./loghawk.sh /path/to/logfile.log
+
 ⏱️ Automation Setup
 Linux: Crontab
 To run LogHawk every 10 minutes:
@@ -53,7 +58,10 @@ bash
 Copy
 Edit
 */10 * * * * /full/path/to/loghawk.sh /var/log/auth.log
-Windows: Task Scheduler
+---
+
+
+# Windows: Task Scheduler
 To schedule LogHawk on Windows:
 
 Open Task Scheduler
@@ -70,7 +78,7 @@ Add arguments: C:\path\to\loghawk.py C:\logs\access.log
 
 Save and test the task.
 
-📂 Project Structure
+# 📂 Project Structure
 bash
 Copy
 Edit
