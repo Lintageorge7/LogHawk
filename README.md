@@ -29,7 +29,7 @@ Copy
 Edit
 python3 loghawk.py /path/to/logfile.log
 
-Example Output:
+## 📤 Example Output
 css
 Copy
 Edit
@@ -39,50 +39,43 @@ Edit
 [🔥] ERROR at 13:24:45: Disk quota exceeded
 [🦠] Suspicious activity: curl download detected in cron job
 
-💻 Usage (Bash)
+## 💻 Usage (Bash)
+
 bash
-Copy
-Edit
+
 ./loghawk.sh /path/to/logfile.log
 
-⏱️ Automation Setup
+## ⏱️ Automation Setup
+
 Linux: Crontab
 To run LogHawk every 10 minutes:
 
 bash
-Copy
-Edit
+
 crontab -e
 Add this line (replace with your full path):
 
 bash
-Copy
-Edit
+
 */10 * * * * /full/path/to/loghawk.sh /var/log/auth.log
 ---
 
 
-# Windows: Task Scheduler
+## 🪟 Windows: Task Scheduler
+
 To schedule LogHawk on Windows:
-
 Open Task Scheduler
-
 Create a basic task:
 
 Trigger: Every 10 minutes
-
 Action: Start a program
-
 Program/script: python
-
 Add arguments: C:\path\to\loghawk.py C:\logs\access.log
-
 Save and test the task.
 
-# 📂 Project Structure
+## 📂 Project Structure
 bash
-Copy
-Edit
+
 LogHawk/
 ├── loghawk.py              # Python version
 ├── loghawk.sh              # Bash version
@@ -90,38 +83,37 @@ LogHawk/
 ├── screenshots/            # Images for report/README
 ├── README.md               # This file
 └── LogHawk_Report.md       # Final report (optional: .pdf)
-🧪 Sample Logs
+
+## 🧪 Sample Logs
+
 Sample logs are located in the sample_logs/ folder for testing:
-
 auth.log
-
 access.log
-
 system.log
 
-🔄 Future Improvements
+## 🔄 Future Improvements
+
  Add email alerting
-
  JSON/CSV export
-
  Web UI dashboard
-
  Integration with Splunk or ELK Stack
 
-📚 References
+## 📚 References
+
 MITRE ATT&CK: https://attack.mitre.org/
-
 NIST Log Management Guidelines: https://csrc.nist.gov/publications
-
 Red Hat: Log Files and Monitoring
 
-🤝 Contributing
+## 🤝 Contributing
+
 Pull requests are welcome! If you discover new threat patterns or want to improve the tool, feel free to contribute.
 
-📄 License
+## 📄 License
+
 This project is licensed under the MIT License.
 
-# 👨‍💻 Author
+## 👨‍💻 Author
+
 Linta Susan George
 Cybersecurity Student @ Lighthouse Labs
 🇨🇦 Canada
