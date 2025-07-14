@@ -16,6 +16,7 @@
 bash
 git clone https://github.com/YOUR-USERNAME/LogHawk.git
 cd LogHawk
+
 ### 2. Make Scripts Executable
 bash
 Copy
