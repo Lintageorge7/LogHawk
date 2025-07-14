@@ -1,4 +1,4 @@
-#
+
 # 🦅 LogHawk
 
 **LogHawk** is a lightweight log monitoring tool for detecting early indicators of security threats. It scans system and application logs for:
