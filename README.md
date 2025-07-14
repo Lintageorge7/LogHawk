@@ -47,7 +47,8 @@ chmod +x loghawk.sh
 
 ---
 
-**🐍 Usage (Python)**
+## 🐍 Usage (Python)
+
 bash
 python3 loghawk.py /path/to/logfile.log
 Example Output:
@@ -68,7 +69,7 @@ bash
 
 ---
 
-⏱️ Automation Setup
+# ⏱️ Automation Setup
 Linux: Crontab
 To run LogHawk every 10 minutes:
 bash
@@ -81,7 +82,7 @@ bash
 ---
 
 
-Windows: Task Scheduler
+# Windows: Task Scheduler
 To schedule LogHawk on Windows:
 
 Open Task Scheduler
@@ -89,7 +90,6 @@ Open Task Scheduler
 Create a basic task:
 
 Trigger: Every 10 minutes
-
 Action: Start a program
 
 Program/script: python
@@ -101,7 +101,7 @@ Save and test it
 
 
 
-📂 Project Structure
+# 📂 Project Structure
 bash
 
 LogHawk/
@@ -111,7 +111,7 @@ LogHawk/
 ├── screenshots/            # Images for report/README
 ├── README.md               # This file
 └── LogHawk_Report.md       # Final report (optional: .pdf)
-🧪 Sample Logs
+# 🧪 Sample Logs
 Example logs are included in the sample_logs/ folder. Use these to test:
 
 auth.log
@@ -120,7 +120,7 @@ system.log
 
 ---
 
-🔄 Future Improvements
+# 🔄 Future Improvements
  Add email alerting
  JSON/CSV export
  Web UI dashboard
@@ -128,7 +128,7 @@ system.log
 
 ---
 
-📚 References
+# 📚 References
 MITRE ATT&CK: https://attack.mitre.org/
 
 NIST Log Management Guidelines: https://csrc.nist.gov/publications
@@ -137,12 +137,12 @@ Red Hat: Log Files and Monitoring: https://access.redhat.com
 
 ---
 
-🤝 Contributing
+# 🤝 Contributing
 Pull requests are welcome! If you have new patterns to detect or want to optimize the tool, feel free to contribute.
 
 ---
 
-📄 License
+# 📄 License
 This project is licensed under the MIT License.
 
 ---
