@@ -129,7 +129,7 @@ Sample logs are located in the sample_logs/ folder for testing:
 
  • NIST Log Management Guidelines: https://csrc.nist.gov/publications 
 
- • Red Hat: Log Files and Monitoring: https://access.redhat.com  
+ • Red Hat: Log Files and Monitoring: https://access.redhat.com 
 
 ## 🤝 Contributing
 Pull requests are welcome. If you have improvements or new detection rules, feel free to contribute!
