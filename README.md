@@ -49,7 +49,7 @@ python3 loghawk.py Sample_logs/auth.log
 
 [screenshots/sample_bashoutput.png](https://github.com/Lintageorge7/LogHawk/blob/84d22923e3ce9c1e7a784bde5d43baba02d11bb3/screenshots/sample_bashoutput.png)
 
-screenshots/sample_output.png
+[screenshots/sample_output.png](https://github.com/Lintageorge7/LogHawk/blob/440c080892cf81e7c78bf9436885271717ce1739/screenshots/sample_output.png)
 
 ## 🧠 Threats Detected
 LogHawk currently detects:
