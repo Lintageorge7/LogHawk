@@ -47,7 +47,7 @@ python3 loghawk.py Sample_logs/auth.log
 
 ## 📸 Sample Output Screenshot
 
-screenshots/sample_bashoutput.png
+[screenshots/sample_bashoutput.png](https://github.com/Lintageorge7/LogHawk/blob/84d22923e3ce9c1e7a784bde5d43baba02d11bb3/screenshots/sample_bashoutput.png)
 
 screenshots/sample_output.png
 
