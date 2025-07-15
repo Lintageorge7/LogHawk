@@ -47,6 +47,9 @@ python3 loghawk.py Sample_logs/auth.log
 
 ## 📸 Sample Output Screenshot
 
+screenshots/sample_bashoutput.png
+
+screenshots/sample_output.png
 
 ## 🧠 Threats Detected
 LogHawk currently detects:
